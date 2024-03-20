@@ -1,14 +1,13 @@
 const setActive = (index) => {
-    nav = document.getElementById("nav")
-    for (var i = 0; i < nav.childNodes.length; i++) {
-        var child = nav.childNodes[i]
-        if (child.nodeType === 1) {child.className = ""}
-    }
-    nav.children[index].className = "active"
+  nav = document.getElementById("nav")
+  for (var i = 0; i < nav.childNodes.length; i++) {
+    var child = nav.childNodes[i]
+    if (child.nodeType === 1) {child.className = ""}
+  }
+  nav.children[index].className = "active"
 }
 
 const goTo = (id,index) => {
-  //document.getElementById(id).scrollIntoView() 
   setOpen(index)
 }
 
