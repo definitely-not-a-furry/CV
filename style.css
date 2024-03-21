@@ -75,36 +75,35 @@ body {
   position: sticky;
   top: 0;
   z-index: 1;
-
-  div {
-    animation: buttonunhover 0.5s forwards ease-out;
-    text-decoration: none;
-    color: var(--tx-sec);
-    padding: 10px;
-
-    .active {
-      background-color: var(--selected);
-      box-shadow: 5px 5px var(--shadow) inset;
-
-    }
-
-    active:hover {
-      background-color: var(--select);
-    }
-  }
-
-  div:hover {
-    background-color: var(--select);
-    animation: buttonhover 500ms forwards ease-out;
-  }
 }
+
+.navbar div {
+  animation: buttonunhover 0.5s forwards ease-out;
+  text-decoration: none;
+  color: var(--tx-sec);
+  padding: 10px;
+}
+
+.navbar div.active {
+  background-color: var(--selected);
+  box-shadow: 5px 5px var(--shadow) inset;
+}
+
+.navbar div.active:hover {
+  background-color: var(--select);
+}
+
+.navbar div:hover {
+  background-color: var(--select);
+  animation: buttonhover 500ms forwards ease-out;
+}
+
 
 .content {
   background-color: var(--bg);
   display: flex;
   justify-content: center;
   flex-direction: column;
-  flex-grow: 1;
   padding: 4%;
 
 }

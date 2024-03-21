@@ -3,7 +3,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Ties Heijnis</title>
-    <link href="sass.css" rel="stylesheet" type="text/css">
     <link href="style.css" rel="stylesheet" type="text/css" />
     <script src="script.js"></script>
 </head>
@@ -12,7 +11,7 @@
         <img src="tungstengamut.svg" onclick="{window.location = 'index.html'}" height="27" style="margin: 7px" width="auto">
         <div id="nav" class="navbar">   
             <div class="active" onclick="setActive(0);goTo('home',0)">Home</div>
-            <div onclick="setActive(1);goTo('about',1)">About Me</div>
+            <div onclick="setActive(1);goTo('about',1)">Over mij</div>
             <div onclick="setActive(2);goTo('portfolio',2)">Portfolio</div>
             <div onclick="setActive(3);goTo('contact',3)">Contact</div>
         </div>
@@ -21,7 +20,7 @@
         <div class="page open">
             <div id="home" class="h1">Persoonlijke gegevens</div>
             <div style="display:flex;">
-                <img class="pfp" src="hellnah.jpg">
+                <img id="pfp" class="pfp" src="hellnah.jpg">
                 <ul>
                     <li>Naam: Ties Heijnis</li>
                     <li>Geboortejaar: <span title="dd-mm-yyyy" dir="ltr" style="cursor: help; text-decoration: dashed;">06/04/2008</span></li>
@@ -50,6 +49,7 @@
         </div>
     </div>
     <div class="footer">
+        <hr>
         <a href="https://github.com/definitely-not-a-furry" target="_blank">
             <img style="width: 21px" src="github-mark-white.svg">
         </a>

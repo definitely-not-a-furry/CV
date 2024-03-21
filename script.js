@@ -19,3 +19,11 @@ const setOpen = (index) => {
   }
   content.children[index].className = "open"
 }
+
+
+(() => {
+  document.onmousemove = (event) => {
+    document.getElementById("pfp").style["box-shadow"] = `${event.clientX / 100}px ${event.clientY / 100}px 10px #333`;
+    console.log(`${event.clientX}, ${event.clientY}`)
+  }
+})();
