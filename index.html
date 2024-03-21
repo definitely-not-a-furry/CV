@@ -8,19 +8,18 @@
 </head>
 <body>
     <div class="header" style="display:flex;">
-        <img src="tungstengamut.svg" onclick="{window.location = 'index.html'}" height="27" style="margin: 7px" width="auto">
+        <img src="./assets/tungstengamut.svg" onclick="{window.location = 'index.html'}" height="27" style="margin: 7px" width="auto">
         <div id="nav" class="navbar">   
             <div class="active" onclick="setActive(0);goTo('home',0)">Home</div>
-            <div onclick="setActive(1);goTo('about',1)">Over mij</div>
-            <div onclick="setActive(2);goTo('portfolio',2)">Portfolio</div>
-            <div onclick="setActive(3);goTo('contact',3)">Contact</div>
+            <div onclick="setActive(1);goTo('portfolio',1)">Portfolio</div>
+            <div onclick="setActive(2);goTo('contact',2)">Contact</div>
         </div>
     </div>
     <div id="content" class="content">
         <div class="page open">
             <div id="home" class="h1">Persoonlijke gegevens</div>
             <div style="display:flex;">
-                <img id="pfp" class="pfp" src="hellnah.jpg">
+                <img id="pfp" class="pfp" src="./assets/hellnah.jpg">
                 <ul>
                     <li>Naam: Ties Heijnis</li>
                     <li>Geboortejaar: <span title="dd-mm-yyyy" dir="ltr" style="cursor: help; text-decoration: dashed;">06/04/2008</span></li>
@@ -28,20 +27,38 @@
                     <li>Email: heijnisties@outlook.com</li>
                 </ul>
             </div>
-        </div>
-        <div class="page">
-            <div id="about" class="h1">Over Mij</div>
+            <div style="display: flex;">
+                <div class="slideshow-container">
+                    <div class="slide fade">
+                        <img src="./assets/slides/photo0.png" style="width:100%">
+                        <div class="caption">Woerden</div>
+                    </div>
+                    <div class="slide fade">
+                        <img src="./assets/slides/photo1.png" style="width:100%">
+                        <div class="caption">Caption Two</div>
+                    </div>
+                    <div class="slide fade">
+                        <img src="./assets/slides/photo2.png" style="width:100%">
+                        <div class="caption">Caption Three</div>
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <div>
+                    <div class="h2">Over mij</div>
+                    Hallo! Ik ben Ties Heijnis. Ik ben 15 jaar, en ik ben een leerling in 4VWO op het Kalsbeek College 
+                </div>
+            </div>
         </div>
         <div class="page">
             <div id="portfolio" class="h1">Portfolio</div>
             Hier zijn een paar projecten waar ik de laatste tijd aan gewerkt heb.
             <div class="h2">Schoolprojecten</div>
-
             <div class="h2"> Vrije-tijdsprojecten</div>
             <a style="color: #000; font-size: 15pt;" href="http://github.com/definitely-not-a-furry/e621-client" target="_blank">e921 client</a><br>
             E921-client wordt een Expo (ReactJS) gebaseerde app voor iOS en Android waarop je op websites zoals e926.net kan bladeren en gemakkelijk posts kan beheren.<br>
             De app is op het moment nog onder constructie en zal in de nabije toekomst gepubliceerd worden voor Android.
-            Bekijk de voortgang en source code <a href="http://github.com/definitely-not-a-furry/e621-client" target="_blank" rel="noopener noreferrer">hier</a>.
+            Bekijk de voortgang en source code op <a href="http://github.com/definitely-not-a-furry/e621-client" target="_blank" rel="noopener noreferrer">github</a>.
         </div>
         <div class="page">
             <div id="contact" class="h1">Contact</div>
@@ -51,9 +68,10 @@
     <div class="footer">
         <hr>
         <a href="https://github.com/definitely-not-a-furry" target="_blank">
-            <img style="width: 21px" src="github-mark-white.svg">
+            <img width="21px" height="auto" src="./assets/github-mark-white.svg">
         </a>
-        <a href="http://149.143.122.217/cv/index.html">My web page</a>
+        <a href="http://149.143.122.217/cv/index.html">My http server</a>
+        <a href="https://149.143.122.217/cv/index.html">My https server</a>
     </div>
 </body>
 </html>

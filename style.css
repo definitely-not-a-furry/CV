@@ -61,11 +61,16 @@ body {
 
 @keyframes slidein {
   from {
-    translate: 20px 0px;
+    translate: 10px 0px;
   }
   to {
     translate: 0px;
   }
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }
 
 .navbar {
@@ -125,13 +130,74 @@ body {
 }
 
 .h1 {
+  padding-left: 0;
   font-size: 18pt;
   display: inherit;
 }
 
 .h2 {
+  padding-left: 0;
   font-size: 16pt;
   display: inherit;
+}
+
+* {box-sizing:border-box}
+
+.slideshow-container {
+  flex: none;
+  background-color: var(--prim);
+  border-radius: 5px;
+  max-width: 700px;
+  position: relative;
+  margin: auto;
+}
+
+.slide {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.5);
+}
+
+.caption {
+  color: #f2f2f2;
+  background-color: var(--prim);
+  font-size: 15px;
+  padding: 8px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.slideactive, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
 }
 
 a {
@@ -144,6 +210,7 @@ a {
   transition: box-shadow 1s;
   box-shadow: 2px 2px 5px 0px #999;
 }
+
 .pfp:hover {
   box-shadow: 5px 5px 10px 5px #555;
 }
@@ -152,8 +219,9 @@ a {
   margin: 2em;
   display: grid;
   gap: 2.5rem;
-  grid-template-columns: 1frs;
+  grid-template-columns: 1fr;
 }
+
 .footer span {
   font-size: 1.1rem;
   color: var(--tx-sec);

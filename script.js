@@ -19,11 +19,30 @@ const setOpen = (index) => {
   }
   content.children[index].className = "open"
 }
+  let slideIndex = 1;
 
-
-(() => {
-  document.onmousemove = (event) => {
-    document.getElementById("pfp").style["box-shadow"] = `${event.clientX / 100}px ${event.clientY / 100}px 10px #333`;
-    console.log(`${event.clientX}, ${event.clientY}`)
+  function plusSlides(n) {  
+    showSlides(slideIndex += n);
   }
-})();
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("slide");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" slideactive", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " slideactive";
+} 
+
+document.onload = (() => {showSlides(1);})
